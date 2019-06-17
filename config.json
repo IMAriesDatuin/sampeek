@@ -14,7 +14,7 @@
 		"language": "en",
 		"name": "Sam Peek",
 		"shortName": "Sam Peek",
-		"base": "",
+		"base": "https://imariesdatuin.github.io/sampeek/build",
 		"url": "https://imariesdatuin.github.io/sampeek/build/",
 		"startURL": "index.html",
 		"display": "standalone",

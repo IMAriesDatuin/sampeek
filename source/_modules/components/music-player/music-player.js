@@ -20,7 +20,7 @@ var musicPlayer = (function musicPlayer($, window, document, undefined) {
 		var $element = $('.music-player'),
 			$eq = $('.music-player-blobs').find('.blobs'),
 			//$audio = document.getElementById('sound-ambience'); 
-			$audio = new Audio('../assets/sounds/ambience.mp3');
+			$audio = new Audio('https://imariesdatuin.github.io/sampeek/build/assets/sounds/ambience.mp3');
 
 
 		/* -------------------------------------------------- */

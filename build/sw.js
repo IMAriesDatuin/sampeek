@@ -111,98 +111,6 @@ self.__precacheManifest = [
     "revision": "80f83b7cf46ba374691f396524ab07a4"
   },
   {
-    "url": "assets/index/hero.jpg",
-    "revision": "b5d220429e2e639a8989cda1db325c2e"
-  },
-  {
-    "url": "assets/index/hero.webp",
-    "revision": "bc31b411cc45ef814b74d3c230285931"
-  },
-  {
-    "url": "assets/index/image-01.jpg",
-    "revision": "58d4b7211ffb98d023cd4c9f50276607"
-  },
-  {
-    "url": "assets/index/image-01.webp",
-    "revision": "39cd61d5191d9f4493789cd5c75025a3"
-  },
-  {
-    "url": "assets/index/image-02.jpg",
-    "revision": "00e76898993bad492cd2c0a186a7bad7"
-  },
-  {
-    "url": "assets/index/image-02.webp",
-    "revision": "9bc7c8969de499653a790f4a3505cf68"
-  },
-  {
-    "url": "assets/index/image-03.jpg",
-    "revision": "fd066a53a564efe71e23d5ecfeb50ada"
-  },
-  {
-    "url": "assets/index/image-03.webp",
-    "revision": "9754030bdf7b02294faa65df992970be"
-  },
-  {
-    "url": "assets/index/image-04.jpg",
-    "revision": "b438dd384b751571c8cffe34d950e631"
-  },
-  {
-    "url": "assets/index/image-04.webp",
-    "revision": "d6bfae5afbefe13885d2f6e538b97f3a"
-  },
-  {
-    "url": "assets/index/image-05.jpg",
-    "revision": "3846bd4d9c01e088fc343e6cab1d6443"
-  },
-  {
-    "url": "assets/index/image-05.webp",
-    "revision": "aa9b699897d9fa298ec9f2c96e0da018"
-  },
-  {
-    "url": "assets/index/image-06.jpg",
-    "revision": "a88ef0c92f1d90252f2d47b819738077"
-  },
-  {
-    "url": "assets/index/image-06.webp",
-    "revision": "d9a4c8d880ad1f7c2528a33b78753d34"
-  },
-  {
-    "url": "assets/index/media-01.jpg",
-    "revision": "2bc284668b24c3126d34c2f4ad7b9729"
-  },
-  {
-    "url": "assets/index/media-01.webp",
-    "revision": "b44609bc0b70a286ecf7ed16a9a4978a"
-  },
-  {
-    "url": "assets/index/media-02.jpg",
-    "revision": "bcc480d0784f366258a814d0a6811333"
-  },
-  {
-    "url": "assets/index/media-02.mp4",
-    "revision": "e4219fcba98ccf16e08b80e86ffa5470"
-  },
-  {
-    "url": "assets/index/media-02.webp",
-    "revision": "592396ce9a540bd4a97426267ab51c5a"
-  },
-  {
-    "url": "assets/index/video-placeholder.jpg",
-    "revision": "52c4bc542947a7c7e7b8eb4979608f37"
-  },
-  {
-    "url": "assets/index/video-placeholder.webp",
-    "revision": "6c7584a31dbc64ba7f8e5abef9816210"
-  },
-  {
-    "url": "assets/index/woman-in-chair.jpg",
-    "revision": "234fe59fc64c95622522841051f6b64f"
-  },
-  {
-    "url": "assets/index/woman-in-chair.webp",
-    "revision": "c51288482c95ceb54b4117878a7ac7f6"
-  },
-  {
     "url": "assets/logos/american-dental-association.svg",
     "revision": "56f71fc5bfb0eae43d76c530eb320934"
   },
@@ -225,22 +133,6 @@ self.__precacheManifest = [
   {
     "url": "assets/logos/the-american-board-of-venous-and-lymphatic-medicine.svg",
     "revision": "6f327decde1a287287aca37a8e792665"
-  },
-  {
-    "url": "assets/placeholder/background.png",
-    "revision": "20f1c9847e54f4c7936fc52f2fddfa07"
-  },
-  {
-    "url": "assets/placeholder/background.webp",
-    "revision": "8c14ccd7bc00c59eb0c5147cf5a617ca"
-  },
-  {
-    "url": "assets/placeholder/bear.jpg",
-    "revision": "6e7c7c57dec5f707fe442cf449c97c00"
-  },
-  {
-    "url": "assets/placeholder/bear.webp",
-    "revision": "dbf61c69f4657984a33017733f78c64c"
   },
   {
     "url": "assets/placeholder/incredible-photo-01.jpg",
@@ -275,204 +167,12 @@ self.__precacheManifest = [
     "revision": "6105fc9ad809eb3412948e73fb5b4b01"
   },
   {
-    "url": "assets/placeholder/john-hernried.jpg",
-    "revision": "bca2ee279fdea995a7b83d17287b93c3"
-  },
-  {
-    "url": "assets/placeholder/john-hernried.webp",
-    "revision": "3ce34c900e5f7b60808e1a5a58f803f6"
-  },
-  {
-    "url": "assets/placeholder/leopard.jpg",
-    "revision": "4d75e964fe5414fb70455e0358d9facc"
-  },
-  {
-    "url": "assets/placeholder/leopard.webp",
-    "revision": "3405a8a954f094600f3f227772ee8de6"
-  },
-  {
-    "url": "assets/placeholder/lion.jpg",
-    "revision": "73096a3bf78aaacf93ae253eda93ed30"
-  },
-  {
-    "url": "assets/placeholder/lion.webp",
-    "revision": "e58e502440de4f34c72dbca63c59327d"
-  },
-  {
-    "url": "assets/placeholder/plane-texture.jpg",
-    "revision": "58382286115a06db5daec02b6f6bffa5"
-  },
-  {
-    "url": "assets/placeholder/plane-texture.webp",
-    "revision": "3129432b5ffb0ac68af451acacb76675"
-  },
-  {
-    "url": "assets/placeholder/rachel-pumphrey.jpg",
-    "revision": "88374c35997e41244ec65432c07f3136"
-  },
-  {
-    "url": "assets/placeholder/rachel-pumphrey.webp",
-    "revision": "93da5e38a3d40cee23fcc2b49f1b312b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_101865508.jpg",
-    "revision": "267f86fa96eb464305cb46140ba4958d"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_101865508.webp",
-    "revision": "69e6cee8465af22b1dcab5aa9dbb2f3a"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1025805082.jpg",
-    "revision": "e514e765a99bd12f0fd09cfe67269f45"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1025805082.webp",
-    "revision": "9ea8a86a09c0e3fd5685449164d3e300"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1028011084.jpg",
-    "revision": "7d4c877c30c4ba1efbefad83fe1b59aa"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1028011084.webp",
-    "revision": "3136e65a5c8b0bc523931b44769b88bb"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1032685408.jpg",
-    "revision": "4f7fd643fb60c31064b97687dc5a712b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1032685408.webp",
-    "revision": "a2cb75fbba4bcbffd9c31b1948712502"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1064553980.jpg",
-    "revision": "73485cf07452751ba8889b36663f651f"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1064553980.webp",
-    "revision": "798a7b2ad7045332de20bdb94c5ea78c"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1242539569.jpg",
-    "revision": "a80ce2b52cc16a01692c116ffd2ecf3b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1242539569.webp",
-    "revision": "180f484d25e2751002a9af2e8f03d2d4"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1337024621.jpg",
-    "revision": "53a007402a4796d207c2940e91a76fd2"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_1337024621.webp",
-    "revision": "348b0bb59bdc5f5ac68e9c6b4de2558d"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_156914597.jpg",
-    "revision": "b2ed73a001c9636e73af9f11021decdc"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_156914597.webp",
-    "revision": "6ce2bab1a06a9b22ae6862b0f4af4b1c"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_207933373.jpg",
-    "revision": "d6c40d7f88dcc7ce6d37f5e3251c3183"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_207933373.webp",
-    "revision": "3ba89b641087677e267da6f06cb6dfcc"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_241334164.jpg",
-    "revision": "8f00f65230a7cfc76080aa5d3766651b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_241334164.webp",
-    "revision": "265b05a9e3a72aef3575cbdee3285e24"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_267632876.jpg",
-    "revision": "deb7ca4faad2fd4a18d72890313c12f5"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_267632876.webp",
-    "revision": "964ea856d893eeb63dd704a2c9384a8b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_287788316.jpg",
-    "revision": "f31c362f0554ede5777d47a6651314f7"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_287788316.webp",
-    "revision": "ab5ba973a807973286b8a9d5cdca327b"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_380423032.jpg",
-    "revision": "d889d3020506c11dfb9fbf4cf51804c3"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_380423032.webp",
-    "revision": "73d34420aee74929868553775b48342c"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_394494271.jpg",
-    "revision": "689c4081718e8ef2de4e67e408dbd8e7"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_394494271.webp",
-    "revision": "c0741a85f93e39646dda4cfe74cd526d"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_415387804.jpg",
-    "revision": "dcdffdd0cd5aadf8908410551369a8f3"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_415387804.webp",
-    "revision": "9aa55592f61a327c6d5b327ddbe5f9dd"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_583329955.jpg",
-    "revision": "d26d7c6136860a37b478de2ead4eeb0a"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_583329955.webp",
-    "revision": "d2ce6ecb231d18e5bb8a76d1fd66fc2f"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_583401700.jpg",
-    "revision": "7128c1b72eca6db71f9adbced171d1cb"
-  },
-  {
-    "url": "assets/placeholder/shutterstock_583401700.webp",
-    "revision": "6cc7988fe4b210584dc598f0b87d1e7f"
-  },
-  {
-    "url": "assets/placeholder/tech.jpg",
-    "revision": "77c4469d5e4b4463103b6a427a6fd93d"
-  },
-  {
-    "url": "assets/placeholder/tech.webp",
-    "revision": "6dc2fbf59853ae98b2cc86b8bda504c0"
-  },
-  {
-    "url": "assets/placeholder/tiger.jpg",
-    "revision": "44d6048c36600b4a62df11b097a3f66c"
-  },
-  {
-    "url": "assets/placeholder/tiger.webp",
-    "revision": "3ff038e88804817cf85457b5c691120b"
-  },
-  {
     "url": "assets/sounds/ambience.ogg",
     "revision": "8e76e4b5440d0fcc3b82e32beda6f014"
   },
   {
     "url": "error.html",
-    "revision": "d2f92de74bf88651b84a4c86d7041bc1"
+    "revision": "2d282d166358ef92ebb1c9fc4d662580"
   },
   {
     "url": "favicon-16x16.png",
@@ -492,11 +192,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3ec2fe79b7d5dce067dac694b6ca4391"
+    "revision": "1a0c9ab9dd5e2979275940db48e5b42c"
   },
   {
     "url": "legal.html",
-    "revision": "3c5d8b3f50410a0716128d8d57c6dc27"
+    "revision": "8f24e520f06d7c64ce84ce8a7c68debf"
   },
   {
     "url": "mstile-150x150.png",
@@ -524,7 +224,7 @@ self.__precacheManifest = [
   },
   {
     "url": "procedures.html",
-    "revision": "fb73f1979ad4db34312e0943bf974a9a"
+    "revision": "bf7fd2c8e103760f30189adc556ca670"
   },
   {
     "url": "safari-pinned-tab.svg",
@@ -532,7 +232,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sample.html",
-    "revision": "7e0eea2c7ffc57a2921e488af0fb7b48"
+    "revision": "c4e24a5307afb627424a60104a17def5"
   },
   {
     "url": "scripts/a.ba0d5f6e21.vendors.js",
@@ -543,12 +243,12 @@ self.__precacheManifest = [
     "revision": "fc517a18bcd24880c972ddc5c2a7953e"
   },
   {
-    "url": "scripts/b.2513af0383.app.js",
-    "revision": "b865165d34c92de33a96db68bfb0a7c3"
+    "url": "scripts/b.f7b9cc2e86.app.js",
+    "revision": "71b4b59e869650ebaeddcb48ea490fb3"
   },
   {
     "url": "template2.html",
-    "revision": "207561ddfefdeda3ba04f37687df0814"
+    "revision": "957148f8804b648c9f557bf43bdeb0d6"
   },
   {
     "url": "webfonts/fa-brands-400.eot",
