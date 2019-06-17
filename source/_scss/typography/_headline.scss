@@ -1,0 +1,46 @@
+/* -------------------------------------------------- */
+/* HEADLINE
+/* -------------------------------------------------- */
+
+// MAIN
+.headline {
+
+	padding: {
+		top: 0;
+		right: 4rem;
+		bottom: 0;
+		left: 4rem;
+	}
+	margin-bottom: 1rem;
+
+	&-title {
+		color: $white;
+		font: $headline;
+		font-size: 6em;
+		line-height: 0.75em;
+	}
+
+	&-subtitle {
+		//clear: left;
+		//float: left;
+		display: block;
+		position: relative;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		color: $white;
+		font: $copy;
+		font-size: 1em;
+		letter-spacing: 0.125em;
+		text-transform: uppercase;
+		border-bottom: thin solid $white;
+	}
+
+	@include break($type: 'width', $min: 0, $max: $tablet, $orientation: '') {
+
+		&-title {
+			font-size: 3.25em;
+		}
+
+	}
+
+}

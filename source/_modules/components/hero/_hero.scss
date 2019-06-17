@@ -1,0 +1,358 @@
+/* -------------------------------------------------- */
+/* HERO
+/* -------------------------------------------------- */
+
+// OPTIONS
+$hero-options: (
+	font: $copy, // Defined the font for the text links.
+	text-color: $white, // Set the default color for all elements.
+	text-hover-color: $black, // Set the hover color for all elements.
+	background-color: $white, // Set the nav panel's background color.
+	background-hover-color: $white, // Set the nav panel's background color.
+	blend-mode: luminosity, // Set the blend-mode when interacting with elements: color, color-burn, color-dodge, exclusion, darken, hue, lighten, luminosity, normal, hard-light, multiply, overlay, saturation, screen, soft-light
+	duration: 400ms, // Set the duration of the animation.
+	delay: 0, // Delay the animation by this amount. 
+	ease: $easeWipe // Set the easing type for this animation.
+);
+
+
+// MAIN
+.hero {
+
+	$self: &;
+
+	/*
+	@include transition(
+		$property: (opacity),
+		$duration: 200ms,
+		$delay: 0,
+		$ease: ease-in-out,
+		$optimize: false
+	);
+	*/
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	padding: {
+		top: 0;
+		right: 4rem;
+		bottom: 0;
+		left: 4rem;
+	}
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	max-width: 100%;
+
+	&-quotes {
+
+		z-index: 1;
+		margin: 0 auto;
+		max-width: 1920px;
+		color: $white;
+		mix-blend-mode: exclusion;
+
+		.quote {
+
+			//overflow: hidden;
+			font: $subheadline;
+			font-size: 12em;
+
+
+			@include break($type: 'width', $min: $tablet, $max: $laptop, $orientation: 'both') {
+				font-size: 8em;
+			}
+
+			@include break($type: 'width', $min: $tablet, $max: $laptop, $orientation: 'landscape') {
+				font-size: 5em;
+			}
+
+
+			@include break($type: 'width', $min: $mobile, $max: $tablet, $orientation: 'portrait') {
+				font-size: 8em;
+			}
+
+			@include break($type: 'width', $min: $mobile, $max: $tablet, $orientation: 'landscape') {
+				font-size: 5em;
+			}
+
+
+			@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'portrait') {
+				font-size: 3.5em;
+			}
+
+			@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'landscape') {
+				font-size: 3.75em;
+			}
+
+
+			@include break($type: 'height', $min: 0, $max: 600px, $orientation: '') {
+				font-size: 3.75em;
+				line-height: 0.6em;
+			}
+
+		}
+
+	}
+
+	&-footer {
+
+		z-index: 2;
+		position: absolute;
+		bottom: 5em;
+		width: 100%;
+		height: auto;
+		max-width: 2560px;
+
+		#{$self}-social {
+
+			z-index: 2;
+			position: absolute;
+			left: 2em;
+			bottom: 0;
+
+			li {
+
+				overflow: hidden;
+				display: inline-block;
+
+				a {
+
+					@include transition(
+						$property: (color),
+						$duration: map-get($hero-options, duration),
+						$delay: map-get($hero-options, delay),
+						$ease: map-get($hero-options, ease),
+						$optimize: false
+					);
+					overflow: hidden;
+					position: relative;
+					color: map-get($hero-options, text-color);
+					font: map-get($hero-options, font);
+					font-size: 1em;
+					letter-spacing: 0.125em;
+					text-transform: uppercase;
+					white-space: nowrap;
+
+					&::before {
+						@include transition(
+							$property: (width),
+							$duration: map-get($hero-options, duration),
+							$delay: map-get($hero-options, delay),
+							$ease: map-get($hero-options, ease),
+							$optimize: false
+						);
+						content: attr(data-letters);
+						z-index: 1;
+						overflow: hidden;
+						position: absolute;
+						//top: 0;
+						left: 0;
+						width: 0%;
+						height: 100%;
+						color: map-get($hero-options, text-hover-color);
+						background: map-get($hero-options, background-hover-color);
+					}
+
+					&:hover {
+
+						color: map-get($hero-options, text-hover-color);
+
+						&::before {
+							width: 100%;
+						}
+
+					}
+
+				}
+
+				&:not(:last-child)::after {
+					color: $white;
+				}
+				
+			}
+
+			@include break($type: 'width', $min: 0, $max: $tablet, $orientation: 'portrait') {
+				position: relative;
+				left: auto;
+				margin-bottom: 1rem;
+				width: 100%;
+				text-align: center;
+			}
+
+			@include break($type: 'width', $min: 0, $max: 729px, $orientation: 'landscape') {
+				display: none;
+			}
+
+		}
+
+		#{$self}-contact-info {
+
+			z-index: 1;
+			position: absolute;
+			right: 2em;
+			bottom: 0;
+
+			li {
+
+				overflow: hidden;
+				display: inline-block;
+
+				a {
+
+					@include transition(
+						$property: (color),
+						$duration: map-get($hero-options, duration),
+						$delay: map-get($hero-options, delay),
+						$ease: map-get($hero-options, ease),
+						$optimize: false
+					);
+					overflow: hidden;
+					position: relative;
+					color: map-get($hero-options, text-color);
+					font: map-get($hero-options, font);
+					font-size: 1em;
+					letter-spacing: 0.125em;
+					text-transform: uppercase;
+					white-space: nowrap;
+
+					&::before {
+						@include transition(
+							$property: (width),
+							$duration: map-get($hero-options, duration),
+							$delay: map-get($hero-options, delay),
+							$ease: map-get($hero-options, ease),
+							$optimize: false
+						);
+						content: attr(data-letters);
+						z-index: 1;
+						overflow: hidden;
+						position: absolute;
+						//top: 0;
+						left: 0;
+						width: 0%;
+						height: 100%;
+						color: map-get($hero-options, text-hover-color);
+						background: map-get($hero-options, background-hover-color);
+					}
+
+					&:hover {
+
+						color: map-get($hero-options, text-hover-color);
+
+						&::before {
+							width: 100%;
+						}
+
+					}
+
+				}
+
+				&:not(:last-child)::after {
+					color: $white;
+				}
+				
+			}
+
+			@include break($type: 'width', $min: 730px, $max: $tablet, $orientation: 'portrait') {
+				position: relative;
+				right: auto;
+				margin-bottom: 1rem;
+				width: 100%;
+				text-align: center;
+			}
+
+			@include break($type: 'width', $min: 0, $max: 729px, $orientation: '') {
+				position: relative;
+				right: auto;
+				margin-bottom: 1rem;
+				width: 100%;
+				text-align: center;
+			}
+
+		}
+
+		#{$self}-scroll-hint {
+
+			z-index: 0;
+			display: block;
+			position: relative;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			width: 5%;
+
+			@include break($type: 'width', $min: 0, $max: $mobile, $orientation: '') {
+				width: 100%;
+			}
+
+			@include break($type: 'height', $min: 0, $max: 700px, $orientation: '') {
+				display: none;
+			}
+
+		}
+
+		@include break($type: 'width', $min: 0, $max: $tablet, $orientation: '') {
+			bottom: 2em;
+		}
+
+		@include break($type: 'height', $min: 0, $max: 600px, $orientation: '') {
+			bottom: 1em;
+		}
+
+	}
+
+	&-particle-grid {
+		z-index: 0;
+		position: absolute;
+	}
+
+	@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'both') {
+		padding: {
+			right: 2rem;
+			left: 2rem;
+		}
+	}
+
+}
+
+
+// MODIFIERS
+.hero {
+
+	$self: &;
+
+	#{$self}-element {
+		
+	}
+
+	&.is-ready {
+
+	}
+
+	&.is-top {
+
+	}
+
+	&.is-not-top {
+
+	}
+
+	&.is-bottom {
+
+	}
+
+	&.is-not-bottom {
+
+	}
+
+	&.is-scrolling-up {
+
+	}
+
+	&.is-scrolling-down {
+
+	}
+
+}

@@ -1,0 +1,19 @@
+
+<!-- CONTENT: SOCIAL -->
+<ul class="social">
+
+	{{#each social.content}}
+	<li class="magnetic-container">
+
+		<a href="{{ link }}" target="_blank" class="social-{{ icon }}-hover magnetic" aria-label="{{ description }}" data-no-swup>
+
+			<p>{{ title }}</p>
+			<span class="fab fa-{{ icon }}" aria-hidden="true"></span>
+
+		</a>
+
+	</li>
+	{{/each}}
+
+</ul>
+<!-- // CONTENT: SOCIAL -->

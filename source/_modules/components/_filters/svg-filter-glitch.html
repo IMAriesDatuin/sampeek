@@ -1,0 +1,13 @@
+
+<!-- CONTENT: SVG FILTER GLITCH -->
+<svg width="0" height="0" aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<filter id="svg-filter-glitch">
+
+		<feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+		<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+
+	</filter>
+
+</svg>
+<!-- // CONTENT: SVG FILTER GLITCH -->

@@ -1,0 +1,257 @@
+/* -------------------------------------------------- */
+/* BUTTON THEME
+/* -------------------------------------------------- */
+
+// OPTIONS
+$button-theme-options: (
+	font: $font-stack,
+	text-color: $white,
+	text-hover-color: $black,
+	icon-color: $black,
+	icon-hover-color: $black,
+	background-color: $white,
+	background-hover-color: $white,
+	radius: 0,
+	duration: 200ms,
+	icon-ease: $easeNatural,
+	button-ease: $easeNatural
+);
+
+
+// CUSTOM
+.button-theme {
+
+	$self: &;
+
+	/*
+	@include shadow(
+		$type: 'box-shadow',
+		$color: #10357e,
+		$x: 0,
+		$y: 5px,
+		$blur: 10px,
+		$spread: 0,
+		$alpha: 0.2,
+		$strength: 0,
+		$inset: false
+	);
+	*/
+	@include transition(
+		$property: (background, filter),
+		$duration: map-get($button-theme-options, duration),
+		$delay: 0,
+		$ease: map-get($button-theme-options, background-ease),
+		$optimize: false
+	);
+	position: relative;
+	padding: {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	//width: 100%;
+	//height: 50px;
+	border-radius: map-get($button-theme-options, radius);
+	border-bottom: thin solid map-get($button-theme-options, background-color);
+	//background: rgba(map-get($button-theme-options, background-color), 1);
+	background: rgba(map-get($button-theme-options, background-color), 0);
+	transform: scale3d(1,1,1);
+	transform-origin: center center;
+
+	.button-label {
+
+		overflow: hidden;
+		align-self: center;
+		//padding-right: pxtoem( map-get($button-theme-options, radius) * 1.5 );
+		width: 100%;
+		color: map-get($button-theme-options, text-color);
+		font: map-get($button-theme-options, font);
+		font-size: 1em;
+		line-height: normal;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		//mix-blend-mode: difference;
+
+		@include break($type: 'width', $min: 0, $max: 320px, $orientation: '') {
+			//font-size: 0.6em;
+		}
+
+	}
+
+	.button-icon {
+
+		z-index: 1;
+		overflow: hidden;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 50px;
+		height: 100%;
+		color: map-get($button-theme-options, icon-color);
+		font-size: 1.25em;
+		border-left: thin dotted $gray;
+
+		&::before {
+			@include transition(
+				$property: (opacity, transform),
+				$duration: map-get($button-theme-options, duration),
+				$delay: 0,
+				$ease: map-get($button-theme-options, icon-ease),
+				$optimize: false
+			);
+			transform-origin: center center;
+		}
+
+		&:nth-of-type(2)::before {
+			opacity: 1;
+			//transform: scale3d(1,1,1) rotate(0);
+			transform: translate3d(0,0,0);
+		}
+
+		&:last-child::before {
+			opacity: 0;
+			//transform: scale3d(0,0,1) rotate(-45deg);
+			transform: translate3d(-50px,0,0);
+		}
+
+	}
+
+	&::after {
+		@include transition(
+			$property: (width, background, filter),
+			$duration: map-get($button-theme-options, duration),
+			$delay: 0,
+			$ease: map-get($button-theme-options, background-ease),
+			$optimize: false
+		);
+		content: '';
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 100%;
+		//border: medium solid $white;
+		border-radius: map-get($button-theme-options, radius);
+		//background: linear-gradient(to right, map-get($button-theme-options, background-hover-color) 0%, darken( map-get($button-theme-options, background-hover-color), $darken) 100%);
+		background: map-get($button-theme-options, background-hover-color);
+		transform-origin: right center;
+	}
+
+	&:hover {
+
+		/*
+		@include shadow(
+			$type: 'box-shadow',
+			$color: #10357e,
+			$x: 0,
+			$y: 10px,
+			$blur: 25px,
+			$spread: 0,
+			$alpha: 0.2,
+			$strength: 0,
+			$inset: false
+		);
+		*/
+		background: rgba(map-get($button-theme-options, background-color), 0);
+
+		.button-label {
+			color: map-get($button-theme-options, text-hover-color);
+		}
+
+		.button-icon {
+
+			color: map-get($button-theme-options, icon-hover-color);
+
+			&:nth-of-type(2)::before {
+				opacity: 0;
+				//transform: scale3d(0,0,1) rotate(45deg);
+				transform: translate3d(50px,0,0);
+			}
+
+			&:last-child::before {
+				opacity: 1;
+				//transform: scale3d(1,1,1) rotate(0);
+				transform: translate3d(0,0,0);
+			}
+
+		}
+
+		&::after {
+			z-index: -1;
+			width: 100%;
+			//background: map-get($button-theme-options, backgroud-hover-color);
+		}
+
+	}
+
+	&.is-active,
+	&.is-touch {
+
+		background: rgba(map-get($button-theme-options, background-color), 1);
+
+		.button-label {
+			color: map-get($button-theme-options, text-hover-color);
+		}
+
+		.button-icon {
+
+			color: map-get($button-theme-options, icon-hover-color);
+
+			&:nth-of-type(2)::before {
+				opacity: 0;
+				display: none;
+				//transform: scale3d(0,0,1) rotate(45deg);
+			}
+
+			&:last-child::before {
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+
+		}
+
+		&::after {
+			z-index: -1;
+			display: none;
+			width: 100%;
+			//background: map-get($button-theme-options, backgroud-hover-color);
+		}
+
+	}
+
+	@include break($type: 'width', $min: 0, $max: $tablet) {
+		width: 100%;
+		max-width: 100%;
+		//color: map-get($button-theme-options, icon-color);
+		//background: map-get($button-theme-options, background-color);
+	}
+	
+	@include break($type: 'width', $min: 0, $max: 320px, $orientation: 'portrait' ) {
+
+		.button-label {
+			padding-right: pxtoem( map-get($button-theme-options, radius) * 0.5 );
+		}
+
+	}
+
+}
+
+
+// MODIFIERS
+.button-theme {
+
+	&.is-active {
+		max-width: 100%;
+		color: map-get($button-theme-options, icon-color);
+		background: map-get($button-theme-options, background-color);
+	}
+
+}

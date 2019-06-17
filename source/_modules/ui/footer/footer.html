@@ -1,0 +1,93 @@
+
+<!-- CONTENT: FOOTER -->
+<footer id="footer" class="footer" data-page={{ page }}>
+
+
+	<!-- BLOCK -->
+	<nav class="footer-container grid-x align-bottom align-left small-up-1 medium-up-2 large-up-4 io">
+
+
+		<!-- MENU -->
+		<ul class="cell footer-menu io-list">
+
+			{{#each menu.content}}
+			<li>
+
+				<a href="--base/{{ link }}" class="{{ id }} glitch" data-letters="{{ title }}">
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // MENU -->
+
+
+		<!-- SOCIAL -->
+		<ul class="cell footer-social social-text io-list">
+
+			{{#each social.content}}
+			<li>
+
+				<a href="{{ link }}" target="_blank" class="social-{{ icon }}-hover glitch" data-letters="{{ title }}" aria-label="{{ description }}">
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // SOCIAL -->
+
+
+		<!-- CONTACT INFO -->
+		<ul class="cell footer-contact-info shrink contact-info-text io-list">
+
+			{{#each contact-info.content}}
+			<li>
+
+				<a href="{{ link }}" class="glitch" data-letters="{{ title }}" aria-label="{{ title }}">
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // CONTACT INFO -->
+
+
+		<!-- BUTTON -->
+		<a href="--base/template2" class="cell footer-button button button-theme glitch io-button">
+			<span class="button-label">Booking</span>
+			<span class="button-icon fal fa-calendar"></span>
+			<span class="button-icon fal fa-long-arrow-right"></span>
+		</a>
+		<!-- // BUTTON -->
+
+
+	</nav>
+	<!-- // BLOCK -->
+
+
+	<!-- LEGAL -->
+	<ul class="footer-legal">
+		<li>&copy;--year --name</li>
+		<li><a href="--base/legal" class="glitch">Terms of Service</a></li>
+		<li><a href="--base/legal#privacy-policy" class="glitch">Privacy Policy</a></li>
+		<li><a href="https://incrediblemarketing.com" target="_blank" class="made-by glitch"><span class="fas fa-heart margin-right-xs"></span>be incredible.</a></li>
+		<li><a href="#willkommen" class="glitch"><span class="fal fa-arrow-to-top margin-right-xs"></span>Top</a></li>
+	</ul>
+	<!-- LEGAL -->
+
+
+	<!-- BACKGROUND -->
+	<!--
+	<div class="footer-background lazy fade-top" data-bg="url({{ root }}{{ assets }}backgrounds/pattern-floral.png)"></div>
+	-->
+	<!-- // BACKGROUND -->
+
+
+</footer>
+<!-- // CONTENT: FOOTER -->

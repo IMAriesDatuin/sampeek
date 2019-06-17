@@ -1,0 +1,203 @@
+/* -------------------------------------------------- */
+/* BUTTON (DEFAULT)
+/* -------------------------------------------------- */
+
+// OPTIONS
+$button-options: (
+	sizes: (
+		small: 25%,
+		medium: 50%,
+		large: 75%
+	),
+	font: $font-stack,
+	text-color: $charcoal,
+	text-hover-color: $white,
+	background-color: $white,
+	background-hover-color: $charcoal,
+	radius: 0,
+	truncate: false,
+	duration: 400ms
+) !default;
+
+
+// MAIN
+.button {
+
+	$self: &;
+
+	@include transition(
+		$property: (color, border, background),
+		$duration: map-get($button-options, duration),
+		$delay: 0,
+		$ease: $easeNatural,
+		$optimize: false
+	);
+	pointer-events: all;
+	outline: none;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: {
+		top: 2rem;
+		bottom: 2rem;
+	};
+	padding: 0.75em 2em;
+	width: 18%;
+	height: auto;
+	min-height: 50px;
+	color: map-get($button-options, text-color);
+	font: map-get($button-options, font);
+	font-size: 1em;
+	text-decoration: none;
+	border-radius: map-get($button-options, radius);
+	background: map-get($button-options, background-color);
+	//background: linear-gradient(to right, map-get($button-options, background-color) 25%, darken( map-get($button-options, background-color), $darken) 100%);
+
+	&-label {
+		flex-basis: auto;
+		font: inherit;
+	}
+
+	&-icon {
+		flex-basis: auto;
+		margin-left: 1rem;
+	}
+
+	&:hover,
+	&.is-active,
+	&.is-touch {
+		color: map-get($button-options, text-hover-color);
+		//border-color: map-get($button-options, background-hover-color);
+		background: map-get($button-options, background-hover-color);
+		//background: linear-gradient(to right, map-get($button-options, background-hover-color) 25%, darken( map-get($button-options, background-hover-color), $darken) 100%);
+	}
+
+	&-outline {
+
+		color: map-get($button-options, background-color);
+		border: medium solid map-get($button-options, background-color);
+		background: transparent;
+
+		&:hover,
+		&.is-active,
+		&.is-touch {
+			color: map-get($button-options, text-color);
+			//border-color: map-get($button-options, background-hover-color);
+			background: map-get($button-options, background-color);
+			//background: linear-gradient(to right, map-get($button-options, background-hover-color) 25%, darken( map-get($button-options, background-hover-color), $darken) 100%);
+		}
+
+	}
+
+	&:active,
+	&:focus {
+		color: map-get($button-options, text-color);
+		background: map-get($button-options, background-color);
+	}
+
+}
+
+
+// MODIFIERS
+.button {
+
+	// COLORS
+	@each $name, $color in $colors {
+
+		// DEFAULT
+		&-#{$name} {
+			background: $color;
+		}
+
+
+		// HOVER
+		&-#{$name}-hover:hover {
+			background: $color;
+		}
+
+	}
+
+
+	// SIZES
+	&-small {
+
+		width: 100%;
+		max-width: map-get(map-get($button-options, sizes), small);
+
+		@include break($type: 'width', $min: $mobile, $max: $laptop, $orientation: '') {
+			max-width: 50%;
+		}
+
+		@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'both') {
+			max-width: 100%;
+		}
+
+	}
+
+	&-medium {
+		width: 100%;
+		max-width: map-get(map-get($button-options, sizes), medium);
+	}
+
+	&-large {
+		width: 100%;
+		max-width: map-get(map-get($button-options, sizes), large);
+	}
+
+	&-full {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'both') {
+
+		&-expand {
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			width: 100%;
+			max-width: 100%;
+		}
+
+	}
+
+
+	// STATE
+	&.disabled {
+		cursor: pointer;
+		pointer-events: none;
+		background: $gray;
+	}
+
+	@include break($type: 'width', $min: 0, $max: $mobile, $orientation: 'both') {
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		width: 100%;
+		max-width: 100%;
+	}
+	
+}
+
+
+// LOGIC
+@if map-get($button-options, truncate) == true {
+
+	.button {
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		&-label {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+	}
+
+}

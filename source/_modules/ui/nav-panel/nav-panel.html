@@ -1,0 +1,68 @@
+
+<!-- CONTENT: NAV PANEL -->
+<div id="nav-panel" class="nav-panel is-unlocked">
+
+
+	<!-- FADE -->
+	<div class="nav-panel-fade"></div>
+	<!-- // FADE -->
+
+
+	<!-- NAV -->
+	<nav>
+
+		<!-- MENU -->
+		<ul class="nav-panel-menu list-separator">
+
+			{{#each menu.content}}
+			<li>
+
+				<a href="--base/{{ link }}" class="{{ id }} glitch" data-letters="{{ title }}">
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // MENU -->
+
+
+		<!-- SOCIAL -->
+		<ul class="nav-panel-social social-text">
+
+			{{#each social.content}}
+			<li>
+
+				<a href="{{ link }}" target="_blank" class="social-{{ icon }}-hover glitch" data-letters="{{ title }}" aria-label="{{ description }}" data-no-swup>
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // SOCIAL -->
+
+	</nav>
+	<!-- // NAV -->
+
+
+	<!-- PARTICLES -->
+	<canvas id="nav-panel-particle-grid" class="nav-panel-particle-grid particle-grid"></canvas>
+	<!-- // PARTICLES -->
+
+
+	<!-- BACKGROUND -->
+	<div class="nav-panel-background">
+		
+		{{#repeat 2}}
+		<span></span>
+		{{/repeat}}
+
+	</div>
+	<!-- // BACKGROUND -->
+
+
+</div>
+<!-- // CONTENT: NAV PANEL -->

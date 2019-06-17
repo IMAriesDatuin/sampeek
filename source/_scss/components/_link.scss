@@ -1,0 +1,73 @@
+/* -------------------------------------------------- */
+/* LINK
+/* -------------------------------------------------- */
+
+// COMMON
+a, button, cite, div, dd, dt, figcaption, h1, h2, h3, h4, h5, h6, input, label, li, ol, p, select, span, tr, td, textarea {
+	/*
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	*/
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+}
+
+
+// STYLE
+a[target=_blank]:not(button):not(.button) {
+
+	@include transition(
+		$property: color,
+		$duration: 250ms,
+		$delay: 0,
+		$ease: $easeNatural,
+		$optimize: false
+	);
+	color: lighten($secondary, 35%);
+
+	&:hover,
+	&:focus {
+		color: $secondary;
+	}
+
+	&:active {
+		//color: inherit;
+	}
+	
+	&:visited {
+		//color: inherit;
+	}
+
+}
+
+
+// STATES
+a.is-inactive {
+	cursor: not-allowed;
+	pointer-events: none;
+	color: $dark-gray;
+}
+
+button.is-inactive,
+.button.is-inactive {
+	cursor: not-allowed;
+	pointer-events: none;
+	color: $gray;
+	background: $gray;
+}
+
+
+// POINTER EVENTS
+main, ul {
+	pointer-events: none;
+}
+
+
+a, button, li {
+	pointer-events: all;
+}

@@ -1,0 +1,71 @@
+
+<!-- CONTENT: HERO -->
+<section id="hero" class="hero grid-x align-middle align-center no-gutter no-selection" role="banner">
+
+
+	<!-- QUOTES -->
+	<header class="hero-quotes quotes cell">
+
+
+		{{#each quotes.content}}
+		<p id="{{ id }}" class="quote">{{ quote }}</p>
+		{{/each}}
+
+
+	</header>
+	<!-- // QUOTES -->
+
+
+	<!-- FOOTER -->
+	<div class="hero-footer cell">
+
+
+		<!-- SOCIAL -->
+		<ul class="hero-social social-text">
+
+			{{#each social.content}}
+			<li>
+
+				<a href="{{ link }}" target="_blank" class="social-{{ icon }}-hover glitch" data-letters="{{ title }}" aria-label="{{ description }}" data-no-swup>
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // SOCIAL -->
+
+
+		<!-- CONTACT INFO -->
+		<ul class="hero-contact-info contact-info-text">
+
+			{{#each contact-info.content}}
+			<li>
+
+				<a href="{{ link }}" class="glitch" data-letters="{{ title }}" aria-label="{{ title }}" data-no-swup>
+					{{ title }}
+				</a>
+
+			</li>
+			{{/each}}
+
+		</ul>
+		<!-- // CONTACT INFO -->
+
+
+		<!-- SCROLL HINT -->
+		<a href="#willkommen" class="hero-scroll-hint" aria-label="Welcome to --name">
+
+			{{> scroll-hint}}
+
+		</a>
+		<!-- // SCROLL HINT -->
+
+
+	</div>
+	<!-- FOOTER -->
+
+
+</section>
+<!-- // CONTENT: HERO -->

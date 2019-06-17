@@ -1,0 +1,264 @@
+/* -------------------------------------------------- */
+/* INTERSECTION OBSERVER
+/* -------------------------------------------------- */
+
+// OPTIONS
+$io-options: (
+	background-color: $white,
+	duration: 400ms, // Set the duration of the animation.
+	delay: 0, // Delay the animation by this amount. 
+	ease: $easeWipe // Set the easing type for this animation.
+);
+
+
+// COPY
+.io {
+
+	$self: &;
+
+	&-headline {
+
+		@extend .fix-font-render;
+		position: relative;
+		margin-bottom: 3rem;
+		//font-kerning: none;
+		word-wrap: break-word;
+		transform-origin: right center;
+
+		.split-text {
+
+			/*
+			@include transition(
+					$property: (color),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+			);
+			color: $white;
+			*/
+
+			&::before {
+				@include transition(
+					$property: (transform),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+				);
+				content: '';
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-top: thin solid map-get($io-options, background-color);
+				border-bottom: thin solid map-get($io-options, background-color);
+				//background: map-get($io-options, background-color);
+				transform: scale3d(1,1,1);
+				transform-origin: left center;
+				will-change: transform;
+			}
+
+			&#{$self}-headline-reveal {
+
+				//color: $white;
+
+				&::before {
+					transform: scale3d(0,1,1);
+					transform-origin: right center;
+				}
+
+			}
+
+		}
+
+		.headline-subtitle {
+
+			overflow: hidden;
+			position: relative;
+
+			/*
+			@include transition(
+					$property: (transform),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+			);
+			*/
+
+			&::before {
+				@include transition(
+					$property: (transform),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+				);
+				content: '';
+				z-index: 1;
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: $black;
+				transform: scale3d(1,1,1);
+				transform-origin: left center;
+				will-change: transform;
+			}
+
+			&#{$self}-headline-reveal {
+
+				&::before {
+					transform: scale3d(0,1,1);
+					transform-origin: right center;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-copy {
+
+		@extend .fix-font-render;
+
+		&::before,
+		&::after {
+			@include transition(
+				$property: (transform),
+				$duration: map-get($io-options, duration) * 2,
+				$delay: map-get($io-options, delay),
+				$ease: map-get($io-options, ease),
+				$optimize: true
+			);
+			content: '';
+			z-index: 1;
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			transform: scale3d(1,1,1);
+			will-change: transform;
+		}
+
+		&::before {
+			left: 0;
+			border-left: thin solid map-get($io-options, background-color);
+			transform-origin: top center;
+		}
+
+		&::after {
+			right: 0;
+			border-right: thin solid map-get($io-options, background-color);
+			transform-origin: bottom center;
+		}
+
+		&#{$self}-copy-reveal {
+
+			&::before {
+				transform: scale3d(1,0,1);
+				transform-origin: bottom center;
+			}
+
+			&::after {
+				transform: scale3d(1,0,1);
+				transform-origin: top center;
+			}
+
+		}
+
+	}
+
+	&-list {
+
+		li {
+
+			@include transition(
+					$property: (color),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+			);
+			color: $black;
+
+			&:not(:last-child)::before {
+				@include transition(
+					$property: (transform),
+					$duration: map-get($io-options, duration),
+					$delay: map-get($io-options, delay),
+					$ease: map-get($io-options, ease),
+					$optimize: true
+				);
+				content: '';
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				//border-top: thin solid map-get($io-options, background-color);
+				border-bottom: thin solid map-get($io-options, background-color);
+				//background: map-get($io-options, background-color);
+				transform: scale3d(1,1,1);
+				transform-origin: left center;
+				will-change: transform;
+			}
+
+			&#{$self}-list-reveal {
+
+				color: $white;
+
+				&::before {
+					transform: scale3d(0,1,1);
+					transform-origin: right center;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-button {
+
+		&::before {
+			@include transition(
+				$property: (transform),
+				$duration: map-get($io-options, duration) * 2,
+				$delay: map-get($io-options, delay),
+				$ease: map-get($io-options, ease),
+				$optimize: true
+			);
+			content: '';
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: map-get($io-options, background-color);
+			transform: scale3d(1,1,1);
+			transform-origin: top center;
+			will-change: transform;
+		}
+
+		&-reveal {
+
+			&::before {
+				transform: scale3d(1,0,1);
+				transform-origin: bottom center;
+			}
+
+		}
+
+	}
+
+}

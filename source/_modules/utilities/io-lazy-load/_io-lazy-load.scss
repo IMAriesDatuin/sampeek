@@ -1,0 +1,121 @@
+/* -------------------------------------------------- */
+/* INTERSECTION OBSERVER (LAZY LOAD)
+/* -------------------------------------------------- */
+
+// OPTIONS
+$io-lazy-load-options: (
+	background-color: $black,
+	duration: 1000ms,
+	delay: 0,
+	ease: $easeWipe
+);
+
+
+// MAIN
+.io-lazy-load {
+
+	overflow: hidden;
+	position: relative;
+
+	&-img {
+		@include transition(
+			$property: (opacity, filter),
+			$duration: map-get($io-lazy-load-options, duration),
+			$delay: map-get($io-lazy-load-options, delay) + 100ms,
+			$ease: map-get($io-lazy-load-options, ease),
+			$optimize: false
+		);
+		opacity: 0;
+		//visibility: hidden;
+		//transform: scale3d(1.25,1.25,1);
+		transform-origin: center center;
+		//transform-style: preserve-3d;
+		filter: blur(8px);
+		//filter: url("#svg-filter-glitch");
+
+		&.is-loaded,
+		&.on-error {
+			opacity: 1;
+			//visibility: visible;
+			//transform: scale3d(1,1,1);
+			filter: blur(0);
+		}
+
+	}
+
+	&::before {
+		@include transition(
+			$property: (background, transform),
+			$duration: map-get($io-lazy-load-options, duration),
+			$delay: map-get($io-lazy-load-options, delay),
+			$ease: map-get($io-lazy-load-options, ease),
+			$optimize: true
+		);
+		content: '';
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: map-get($io-lazy-load-options, background-color);
+		transform: scale3d(1,1,1);
+		transform-origin: bottom center;
+	}
+
+	&.is-loaded {
+
+		&::before {
+			transform: scale3d(1,0,1);
+		}
+
+	}
+
+	&.on-error {
+
+		&::before {
+			transform: scale3d(0,1,1);
+		}
+
+		background-image: url(../assets/error-static.gif);
+		background-repeat: repeat;
+
+	}
+
+}
+
+
+// BACKGROUND IMAGE
+div {
+
+	&.lazy {
+
+		&[data-bg] {
+			//opacity: 0;
+		}
+
+		&[data-was-processed='true'] {
+			//opacity: 1;
+		}
+
+	}
+
+}
+
+
+// HACKS (YUCK)
+/* IE Edge fix for IntersectionObserver. */
+img[data-src],
+img[data-srcset] {
+	display: block;
+	min-height: 1px;
+}
+
+/* Firefox fix for load anomaly. */
+@-moz-document url-prefix() {
+
+	img:-moz-loading {
+		visibility: hidden;
+	}
+	
+}

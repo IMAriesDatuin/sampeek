@@ -1,0 +1,64 @@
+
+# CONTENT
+content:
+ -
+  id: 'home'
+  title: 'Home'
+  description: ''
+  image-src: 'assets/placeholder/bear.jpg'
+  webp: 'assets/placeholder/bear.webp'
+  link: 'sample'
+
+
+ -
+  id: 'about'
+  title: 'About'
+  description: ''
+  image-src: 'assets/placeholder/leopard.jpg'
+  webp: 'assets/placeholder/leopard.webp'
+  link: 'index'
+
+
+ -
+  id: 'speaking'
+  title: 'Speaking'
+  description: ''
+  image-src: 'assets/placeholder/lion.jpg'
+  webp: 'assets/placeholder/lion.webp'
+  link: 'sample'
+
+
+ -
+  id: 'consulting'
+  title: 'Consulting'
+  description: ''
+  image-src: 'assets/placeholder/tiger.jpg'
+  webp: 'assets/placeholder/tiger.webp'
+  link: 'index'
+
+
+ -
+  id: 'investing'
+  title: 'Investing'
+  description: ''
+  image-src: 'assets/placeholder/bear.jpg'
+  webp: 'assets/placeholder/tiger.webp'
+  link: 'sample'
+
+
+ -
+  id: 'contact'
+  title: 'Contact'
+  description: ''
+  image-src: 'assets/placeholder/leopard.jpg'
+  webp: 'assets/placeholder/bear.webp'
+  link: 'index'
+
+
+ -
+  id: 'blog'
+  title: 'Blog'
+  description: ''
+  image-src: 'assets/placeholder/lion.jpg'
+  webp: 'assets/placeholder/leopard.webp'
+  link: 'sample'

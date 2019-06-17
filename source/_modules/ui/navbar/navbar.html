@@ -1,0 +1,62 @@
+
+<!-- CONTENT: NAVBAR -->
+<header id="navbar" class="navbar" class="headroom">
+
+
+	<!-- GRID -->
+	<div class="menubar">
+
+
+		<!-- CELL -->
+		<a href="--base/" class="menubar-logo" aria-label="--name" >
+
+			{{> logo-text}}
+
+		</a>
+		<!-- // CELL -->
+
+
+		<!-- CELL -->
+		<nav class="menubar-menu no-cursor">
+
+			<!-- MENU -->
+			<ul>
+
+				{{#each menu.content}}
+				<li>
+
+					<a href="--base/{{ link }}" class="{{ id }}">{{ title }}</a>
+
+				</li>
+				{{/each}}
+
+			</ul>
+			<!-- // MENU -->
+
+		</nav>
+		<!-- // CELL -->
+
+
+		<!-- CELL -->
+		<a href="#" class="menubar-cta button no-cursor">
+			<p>Button</p>
+			<span class="far fa-calendar-alt"></span>
+		</a>
+		<!-- // CELL -->
+
+
+		<!-- CELL -->
+		<div class="menubar-toggle menu-toggle headroom glitch magnetic">
+
+			{{> menu-toggle}}
+
+		</div>
+		<!-- // CELL -->
+
+
+	</div>
+	<!-- GRID -->
+
+
+</header>
+<!-- // CONTENT: NAVBAR -->
